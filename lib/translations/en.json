@@ -1,0 +1,306 @@
+{
+  "nav": {
+    "services": "Services",
+    "design": "Design & Furnishing",
+    "pricing": "Pricing",
+    "listProperty": "List Property",
+    "ownerPortal": "Owner Portal",
+    "getEvaluation": "Get Free Evaluation"
+  },
+  "hero": {
+    "headline": "Turn Your Property Into a Revenue-Generating Masterpiece",
+    "subheadline": "Egypt's Premier Hospitality & Property Management Company",
+    "ctaPrimary": "Get Free Property Evaluation",
+    "ctaSecondary": "Explore Our Services"
+  },
+  "trustBadges": {
+    "superhost": "Airbnb Superhost",
+    "rating": "4.9★ Rating",
+    "properties": "50+ Managed Properties",
+    "support": "24/7 Support"
+  },
+  "services": {
+    "title": "Our Services",
+    "propertyManagement": {
+      "title": "Property Management",
+      "subtitle": "The Art of Maximizing Returns"
+    },
+    "designFurnishing": {
+      "title": "Design & Furnishing",
+      "subtitle": "Transform Spaces Into Experiences"
+    }
+  },
+  "comprehensiveServices": {
+    "title": "Comprehensive Property Management Services",
+    "design": {
+      "title": "Design & Furnishing",
+      "description": "Transform your space into a guest-ready, booking-magnet property"
+    },
+    "listing": {
+      "title": "Listing & Marketing",
+      "description": "Multi-OTA presence with professional photos and compelling descriptions"
+    },
+    "revenue": {
+      "title": "Revenue Management",
+      "description": "Dynamic pricing powered by data analytics to maximize your income"
+    },
+    "guest": {
+      "title": "Guest Management",
+      "description": "24/7 communication, check-in coordination, and 5-star hospitality"
+    },
+    "property": {
+      "title": "Property Care",
+      "description": "Regular maintenance, housekeeping, and quality inspections"
+    },
+    "financial": {
+      "title": "Financial Management",
+      "description": "Transparent reporting, automated payouts, and tax documentation"
+    },
+    "legal": {
+      "title": "Legal & Compliance",
+      "description": "Stay compliant with local regulations and platform requirements"
+    }
+  },
+  "pricing": {
+    "title": "Choose Your Package",
+    "subtitle": "Flexible plans designed to fit your needs",
+    "marketing": {
+      "title": "Marketing Only",
+      "percentage": "10-15%",
+      "features": [
+        "Multi-OTA listing (Airbnb, Booking.com, Vrbo)",
+        "Professional photography",
+        "Dynamic pricing optimization",
+        "Monthly performance reporting",
+        "You handle guest communication"
+      ]
+    },
+    "performance": {
+      "title": "Performance",
+      "percentage": "25% of Net Revenue",
+      "popular": "Most Popular",
+      "features": [
+        "Everything in Marketing",
+        "Full guest management & 24/7 support",
+        "Professional housekeeping",
+        "Preventive maintenance",
+        "Owner handles major maintenance only"
+      ]
+    },
+    "allInclusive": {
+      "title": "All-Inclusive",
+      "percentage": "30% of Total Revenue",
+      "features": [
+        "Everything in Performance",
+        "ALL operating costs covered",
+        "Utilities, WiFi, subscriptions",
+        "Regular maintenance & repairs",
+        "Owner only handles major improvements"
+      ]
+    }
+  },
+  "ownerPortal": {
+    "title": "Your Property at Your Fingertips",
+    "subtitle": "Access real-time data and insights through our owner portal",
+    "features": [
+      "Real-time financial dashboard",
+      "Live booking calendar",
+      "Performance analytics & ROI tracking",
+      "Maintenance tracking",
+      "Guest reviews and feedback",
+      "Manual reservation creation"
+    ],
+    "cta": "Access Owner Portal"
+  },
+  "whyChoose": {
+    "title": "Why Choose Best of Bedz",
+    "maximize": {
+      "title": "Maximize Income",
+      "description": "Data-driven pricing and multi-platform distribution"
+    },
+    "zeroStress": {
+      "title": "Zero Stress",
+      "description": "We handle everything from A to Z"
+    },
+    "technology": {
+      "title": "Smart Technology",
+      "description": "Powered by industry-leading Guesty platform"
+    },
+    "superhost": {
+      "title": "Superhost Standards",
+      "description": "Consistently delivering 5-star experiences"
+    },
+    "datadriven": {
+      "title": "Data-Driven Decisions",
+      "description": "Analytics-powered strategies for maximum returns"
+    },
+    "sustainable": {
+      "title": "Sustainable Practices",
+      "description": "Eco-friendly operations that guests appreciate"
+    }
+  },
+  "comparison": {
+    "title": "Best of Bedz vs Typical Agency",
+    "bob": "Best of Bedz",
+    "typical": "Typical Agency",
+    "features": {
+      "technology": "Technology Platform",
+      "pricing": "Dynamic Pricing",
+      "support": "24/7 Support",
+      "transparency": "Full Transparency",
+      "multiOTA": "Multi-OTA Management",
+      "superhost": "Superhost Guarantee"
+    }
+  },
+  "finalCTA": {
+    "title": "Ready to Maximize Your Rental Income?",
+    "subtitle": "Get a free property evaluation and discover your revenue potential",
+    "button": "Get Free Evaluation"
+  },
+  "footer": {
+    "company": {
+      "name": "Best of Bedz",
+      "tagline": "Premium Property Management & Hospitality Solutions in Egypt",
+      "address": "New Cairo, 5th Settlement, Egypt",
+      "phone": "+20 123 456 7890",
+      "email": "hello@bestofbedz.com"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About Us",
+      "services": "Services",
+      "pricing": "Pricing",
+      "listProperty": "List Your Property",
+      "ownerPortal": "Owner Portal",
+      "contact": "Contact"
+    },
+    "social": {
+      "title": "Follow Us"
+    }
+  },
+  "design": {
+    "hero": {
+      "title": "From Empty Space to Five-Star Experience",
+      "subtitle": "We transform properties into guest-ready, booking-magnet spaces"
+    },
+    "process": {
+      "title": "Our 6-Step Design Process",
+      "step1": {
+        "title": "Discovery & Assessment",
+        "description": "We analyze your space, target guests, and budget"
+      },
+      "step2": {
+        "title": "Design Concept",
+        "description": "Create a tailored design plan that maximizes appeal"
+      },
+      "step3": {
+        "title": "Furniture & Décor Sourcing",
+        "description": "Select quality pieces that balance style and durability"
+      },
+      "step4": {
+        "title": "Installation & Styling",
+        "description": "Professional setup and finishing touches"
+      },
+      "step5": {
+        "title": "Professional Photography",
+        "description": "High-quality photos that showcase your property"
+      },
+      "step6": {
+        "title": "Launch & List",
+        "description": "Go live on all major booking platforms"
+      }
+    },
+    "pricing": {
+      "title": "Design & Furnishing Investment",
+      "designFee": "Design & Furnishing Fee: 20% of total project cost",
+      "markup": "Equipment & Furniture Markup: 5-10%"
+    },
+    "gallery": {
+      "title": "Our Projects",
+      "stella": {
+        "title": "Stella, Sidi Abdelrahman",
+        "location": "200m from El Alamein, North Coast Egypt",
+        "type": "Apartment/Chalet",
+        "style": "Contemporary Luxury with Warm Neutrals",
+        "before": "Before",
+        "after": "After"
+      },
+      "comingSoon": "Coming Soon"
+    }
+  },
+  "listProperty": {
+    "title": "List Your Property",
+    "subtitle": "Tell us about your property and we'll help you maximize its potential",
+    "ownerInfo": {
+      "title": "Property Owner Information",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "language": "Preferred Language"
+    },
+    "propertyDetails": {
+      "title": "Property Details",
+      "propertyName": "Property Name",
+      "propertyType": "Property Type",
+      "category": "Category",
+      "location": "Location/Address",
+      "city": "City",
+      "compoundName": "Compound/Building Name"
+    },
+    "specifications": {
+      "title": "Property Specifications",
+      "size": "Size (sqm)",
+      "bedrooms": "Number of Bedrooms",
+      "bathrooms": "Number of Bathrooms",
+      "livingAreas": "Number of Living Areas",
+      "balcony": "Has Balcony/Terrace",
+      "pool": "Has Pool",
+      "garden": "Has Garden",
+      "parking": "Parking Available",
+      "floor": "Floor Number"
+    },
+    "amenities": {
+      "title": "Amenities",
+      "wifi": "WiFi",
+      "ac": "Air Conditioning",
+      "heating": "Heating",
+      "tv": "TV",
+      "kitchen": "Kitchen",
+      "washer": "Washer",
+      "dryer": "Dryer",
+      "dishwasher": "Dishwasher"
+    },
+    "services": {
+      "title": "Service Selection",
+      "question": "Which service are you interested in?",
+      "marketing": "Marketing Only (10-15%)",
+      "performance": "Performance Management (25%)",
+      "allInclusive": "All-Inclusive Management (30%)",
+      "design": "Design & Furnishing",
+      "research": "Market Research & Valuation"
+    },
+    "description": {
+      "title": "Property Description",
+      "propertyDescription": "Detailed Description",
+      "uniqueness": "What makes your property unique?"
+    },
+    "currentStatus": {
+      "title": "Current Status",
+      "furnished": "Is the property currently furnished?",
+      "listed": "Is the property currently listed on any platform?",
+      "platforms": "If yes, which platforms?",
+      "revenue": "Current monthly revenue (if applicable)"
+    },
+    "photos": {
+      "title": "Photos",
+      "instructions": "Please prepare at least 10-15 high-quality photos of your property. We'll contact you with upload instructions."
+    },
+    "submit": "Submit Your Property for Evaluation",
+    "confirmation": "We'll review your submission and contact you within 24-48 hours"
+  },
+  "scheduleMeeting": {
+    "title": "Schedule a Video Call",
+    "subtitle": "Meet with our team to discuss your property",
+    "button": "Book Your Meeting"
+  }
+}
