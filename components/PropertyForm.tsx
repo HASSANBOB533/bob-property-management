@@ -19,6 +19,36 @@ export default function PropertyForm() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
+        // Process checkboxes into comma-separated strings
+    const amenities = ['wifi', 'ac', 'heating', 'tv', 'kitchen', 'washer', 'dryer', 'dishwasher']
+      .filter(a => formData.get(`amenity_${a}`) === 'on')
+      .map(a => a.charAt(0).toUpperCase() + a.slice(1))
+      .join(', ');
+    
+    const services = ['marketing', 'performance', 'allInclusive', 'design', 'research']
+      .filter(s => formData.get(`service_${s}`) === 'on')
+      .join(', ');
+    
+    const features = ['balcony', 'pool', 'garden', 'parking']
+      .filter(f => formData.get(f) === 'on')
+      .map(f => f.charAt(0).toUpperCase() + f.slice(1))
+      .join(', ');
+    
+    // Enhance data object with processed fields
+    data.amenities = amenities;
+    data.services = services;
+    data.hasBalcony = formData.get('balcony') === 'on' ? 'Yes' : 'No';
+    data.hasPool = formData.get('pool') === 'on' ? 'Yes' : 'No';
+    data.hasGarden = formData.get('garden') === 'on' ? 'Yes' : 'No';
+    data.parking = formData.get('parking') === 'on' ? 'Yes' : 'No';
+    data.uniqueFeatures = features;
+    data.isListed = data.currentlyListed || 'no';
+    data.platforms = data.platforms || '';
+    data.isFurnished = data.furnished || 'no';
+
+        data.compound = data.compoundName || '';
+
+
     try {
       // Submit to Google Sheets via Google Apps Script
       const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
