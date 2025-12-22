@@ -162,8 +162,8 @@
       "name": "Best of Bedz",
       "tagline": "Premium Property Management & Hospitality Solutions in Egypt",
       "address": "New Cairo, 5th Settlement, Egypt",
-      "phone": "+20 123 456 7890",
-      "email": "hello@bestofbedz.com"
+      "phone": "+201227580022",
+      "email": "Cs@bestofbedz.com"
     },
     "quickLinks": {
       "title": "Quick Links",
@@ -293,7 +293,8 @@
     },
     "photos": {
       "title": "Photos",
-      "instructions": "Please prepare at least 10-15 high-quality photos of your property. We'll contact you with upload instructions."
+      "instructions": "Please prepare at least 10-15 high-quality photos of your property. We'll contact you with upload instructions.",
+      "teamNote": "Our team will contact you to collect property photos via email or WhatsApp after your initial submission."
     },
     "submit": "Submit Your Property for Evaluation",
     "confirmation": "We'll review your submission and contact you within 24-48 hours"
