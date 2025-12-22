@@ -43,7 +43,7 @@ export default function PropertyForm() {
     data.parking = formData.get('parking') === 'on' ? 'Yes' : 'No';
     data.uniqueFeatures = features;
     data.isListed = data.currentlyListed || 'no';
-    data.platforms = data.platforms || '';
+    data.platforms = formData.get('platforms') || '';
     data.isFurnished = data.furnished || 'no';
 
         data.compound = data.compoundName || '';
