@@ -47,6 +47,10 @@ export default function PropertyForm() {
     data.isFurnished = data.furnished || 'no';
 
         data.compound = data.compoundName || '';
+        
+    // Fix propertyImages - use state directly instead of stringified hidden input
+    data.propertyImages = JSON.stringify(uploadedImages);
+
 
 
     try {
