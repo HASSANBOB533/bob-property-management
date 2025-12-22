@@ -2,12 +2,14 @@
 
 import {useState} from 'react';
 import {useTranslations, useLocale} from 'next-intl';
+import { CldUploadWidget } from 'next-cloudinary';
 
 export default function PropertyForm() {
   const t = useTranslations('listProperty');
   const locale = useLocale();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+    const [uploadedImages, setUploadedImages] = useState<string[]>([]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -447,21 +449,81 @@ export default function PropertyForm() {
           </div>
         </section>
 
-        {/* Photos */}
-        <section className="bg-white rounded-xl p-6 shadow-md">
-          <h2 className="text-2xl font-bold text-dark-text mb-6">
-            {t('photos.title')}
-          </h2>
-          <div className="bg-blue-primary/5 border-2 border-blue-primary rounded-lg p-8 text-center">
-            <div className="text-5xl mb-4">📸</div>
-            <p className="text-dark-text font-semibold mb-2">
-              {t('photos.instructions')}
-            </p>
-            <p className="text-dark-text/70 text-sm">
-              {t('photos.teamNote')}
-            </p>
-          </div>
-        </section>
+      {/* Photos */}
+<section className="bg-white rounded-xl p-6 shadow-md">
+  <h2 className="text-2xl font-bold text-dark-text mb-6">
+    {t('photos.title')}
+  </h2>
+  
+  <div className="space-y-4">
+    <CldUploadWidget
+      uploadPreset="property-photos"
+      options={{
+        cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+        multiple: true,
+        maxFiles: 20,
+        resourceType: 'image',
+        clientAllowedFormats: ['jpg', 'jpeg', 'png', 'webp'],
+        maxFileSize: 10000000,
+        sources: ['local', 'url', 'camera'],
+      }}
+      onSuccess={(result: any) => {
+        if (result.event === 'success') {
+          setUploadedImages(prev => [...prev, result.info.secure_url]);
+        }
+      }}
+    >
+      {({ open }) => (
+        <button
+          type="button"
+          onClick={() => open()}
+          className="w-full bg-blue-primary/10 border-2 border-blue-primary rounded-lg p-8 text-center hover:bg-blue-primary/20 transition-all"
+        >
+          <div className="text-5xl mb-4">📸</div>
+          <p className="text-dark-text font-semibold mb-2">
+            Click to Upload Property Photos
+          </p>
+          <p className="text-dark-text/70 text-sm">
+            Upload up to 20 images (JPG, PNG, WEBP - Max 10MB each)
+          </p>
+        </button>
+      )}
+    </CldUploadWidget>
+
+    {uploadedImages.length > 0 && (
+      <div className="mt-6">
+        <p className="text-sm font-semibold text-dark-text mb-3">
+          Uploaded Images ({uploadedImages.length})
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {uploadedImages.map((url, index) => (
+            <div key={index} className="relative group">
+              <img
+                src={url}
+                alt={`Property ${index + 1}`}
+                className="w-full h-32 object-cover rounded-lg"
+              />
+              <button
+                type="button"
+                onClick={() => setUploadedImages(prev => prev.filter((_, i) => i !== index))}
+                className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                ×
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+    
+    <input
+      type="hidden"
+      name="propertyImages"
+      value={JSON.stringify(uploadedImages)}
+    />
+  </div>
+</section>
+
 
         {/* Submit Button */}
         <div className="text-center">
