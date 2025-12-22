@@ -3,6 +3,7 @@
 import {useState} from 'react';
 import {useTranslations, useLocale} from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
@@ -23,14 +24,23 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center">
-            <div className="text-2xl font-bold text-blue-primary">
-              <span className="text-red-accent">B</span>
-              <span className="text-green-primary">O</span>
-              <span className="text-yellow-primary">B</span>
-            </div>
-            <div className={`${locale === 'ar' ? 'mr-2' : 'ml-2'} hidden sm:block`}>
-              <div className="text-xs font-semibold text-dark-text">Best of Bedz</div>
+          <Link href={`/${locale}`} className="flex items-center gap-3">
+            <Image 
+              src="/images/logo.svg" 
+              alt="Best of Bedz Logo" 
+              width={50} 
+              height={50}
+              className="w-12 h-12 lg:w-14 lg:h-14"
+            />
+            <div className="flex flex-col">
+              <div className="text-3xl lg:text-4xl font-bold text-blue-primary">
+                <span className="text-red-accent">B</span>
+                <span className="text-green-primary">O</span>
+                <span className="text-yellow-primary">B</span>
+              </div>
+              <div className="text-xs lg:text-sm font-semibold text-dark-text -mt-1">
+                Best of Bedz
+              </div>
             </div>
           </Link>
 

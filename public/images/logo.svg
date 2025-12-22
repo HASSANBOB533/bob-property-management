@@ -1,0 +1,13 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue circle background -->
+  <circle cx="60" cy="60" r="60" fill="#003580"/>
+  
+  <!-- White curved shape (bed-like design) -->
+  <path d="M30 50 Q30 40, 40 40 L80 40 Q90 40, 90 50 L90 70 Q90 75, 85 75 L35 75 Q30 75, 30 70 Z" fill="white"/>
+  
+  <!-- Yellow accent (pillow or sun) -->
+  <circle cx="85" cy="35" r="12" fill="#f9de6f"/>
+  
+  <!-- Additional white detail (pillow shape) -->
+  <rect x="42" y="48" width="36" height="15" rx="3" fill="#003580" opacity="0.2"/>
+</svg>
