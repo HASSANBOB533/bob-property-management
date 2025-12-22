@@ -10,6 +10,7 @@ export default function PropertyForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
     const [uploadedImages, setUploadedImages] = useState<string[]>([]);
+    const [sessionId] = useState(() => `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -456,23 +457,24 @@ export default function PropertyForm() {
   </h2>
   
   <div className="space-y-4">
-    <CldUploadWidget
-      uploadPreset="property-photos"
-      options={{
-        cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-        multiple: true,
-        maxFiles: 20,
-        resourceType: 'image',
-        clientAllowedFormats: ['jpg', 'jpeg', 'png', 'webp'],
-        maxFileSize: 10000000,
-        sources: ['local', 'url', 'camera'],
-      }}
-      onSuccess={(result: any) => {
-        if (result.event === 'success') {
-          setUploadedImages(prev => [...prev, result.info.secure_url]);
-        }
-      }}
-    >
+   <CldUploadWidget
+  uploadPreset="property-photos"
+  options={{
+    cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+    multiple: true,
+    maxFiles: 20,
+    resourceType: 'image',
+    clientAllowedFormats: ['jpg', 'jpeg', 'png', 'webp'],
+    maxFileSize: 10000000,
+    sources: ['local', 'url', 'camera'],
+        folder: `properties/${sessionId}`,  }}
+  onSuccess={(result: any) => {
+    if (result.event === 'success') {
+      setUploadedImages(prev => [...prev, result.info.secure_url]);
+    }
+  }}
+>
+
       {({ open }) => (
         <button
           type="button"
