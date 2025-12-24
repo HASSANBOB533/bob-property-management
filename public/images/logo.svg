@@ -1,13 +1,18 @@
-<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Blue circle background -->
-  <circle cx="60" cy="60" r="60" fill="#003580"/>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue rounded square background -->
+  <rect width="200" height="200" rx="30" fill="#3B6CB4"/>
   
-  <!-- White curved shape (bed-like design) -->
-  <path d="M30 50 Q30 40, 40 40 L80 40 Q90 40, 90 50 L90 70 Q90 75, 85 75 L35 75 Q30 75, 30 70 Z" fill="white"/>
+  <!-- White curved "B" shape - main body -->
+  <path d="M50 60 C50 45, 60 40, 75 40 L120 40 C135 40, 145 50, 145 65 C145 75, 140 82, 130 85 C140 88, 145 95, 145 105 C145 120, 135 130, 120 130 L75 130 C60 130, 50 125, 50 110 Z M65 60 L65 78 L115 78 C122 78, 128 73, 128 68 C128 63, 122 60, 115 60 Z M65 92 L65 110 L115 110 C122 110, 128 105, 128 100 C128 95, 122 92, 115 92 Z" fill="white"/>
   
-  <!-- Yellow accent (pillow or sun) -->
-  <circle cx="85" cy="35" r="12" fill="#f9de6f"/>
+  <!-- Yellow accent curve/highlight -->
+  <path d="M145 50 Q165 55, 165 75 Q165 90, 150 95 L148 88 Q157 85, 157 75 Q157 65, 145 62 Z" fill="#E9C500"/>
   
-  <!-- Additional white detail (pillow shape) -->
-  <rect x="42" y="48" width="36" height="15" rx="3" fill="#003580" opacity="0.2"/>
+  <!-- Small yellow accent dot -->
+  <circle cx="155" cy="45" r="8" fill="#E9C500"/>
+  
+  <!-- Optional: Subtle bed icon at bottom -->
+  <rect x="70" y="145" width="60" height="8" rx="3" fill="white" opacity="0.4"/>
+  <rect x="80" y="155" width="8" height="15" rx="2" fill="white" opacity="0.4"/>
+  <rect x="112" y="155" width="8" height="15" rx="2" fill="white" opacity="0.4"/>
 </svg>
