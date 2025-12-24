@@ -49,8 +49,7 @@ export default function PropertyForm() {
         data.compound = data.compoundName || '';
         
     // Fix propertyImages - use state directly instead of stringified hidden input
-    data.propertyImages = JSON.stringify(uploadedImages);
-        console.log('DEBUG: platforms =', data.platforms);
+    data.propertyImages = uploadedImages.map(img => img.url).join(', ');        console.log('DEBUG: platforms =', data.platforms);
         console.log('DEBUG: propertyImages =', data.propertyImages);
         console.log('DEBUG: uploadedImages state =', uploadedImages);
 
