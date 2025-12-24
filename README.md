@@ -91,10 +91,10 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## Contact
 
-- **Email**: hello@bestofbedz.com
-- **Phone**: +20 123 456 7890
+- **Email**: cs@bestofbedz.com
+- **Phone**: +20 122 758 0022
 - **Address**: New Cairo, 5th Settlement, Egypt
 
 ## License
 
-All rights reserved © 2024 Best of Bedz
+All rights reserved © 2025 Best of Bedz
