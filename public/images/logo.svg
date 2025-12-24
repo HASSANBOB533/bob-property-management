@@ -2,17 +2,19 @@
   <!-- Blue rounded square background -->
   <rect width="200" height="200" rx="30" fill="#3B6CB4"/>
   
-  <!-- White curved "B" shape - main body -->
-  <path d="M50 60 C50 45, 60 40, 75 40 L120 40 C135 40, 145 50, 145 65 C145 75, 140 82, 130 85 C140 88, 145 95, 145 105 C145 120, 135 130, 120 130 L75 130 C60 130, 50 125, 50 110 Z M65 60 L65 78 L115 78 C122 78, 128 73, 128 68 C128 63, 122 60, 115 60 Z M65 92 L65 110 L115 110 C122 110, 128 105, 128 100 C128 95, 122 92, 115 92 Z" fill="white"/>
+  <!-- White "B" letter - simplified -->
+  <path d="M65 60 L65 130 L115 130 C128 130, 138 120, 138 107 C138 97, 132 90, 123 87 C130 84, 135 77, 135 68 C135 55, 125 60, 112 60 Z" fill="white"/>
+  <path d="M80 75 L105 75 C112 75, 118 79, 118 86 C118 93, 112 97, 105 97 L80 97 Z" fill="#3B6CB4"/>
+  <path d="M80 107 L110 107 C117 107, 123 111, 123 118 C123 125, 117 115, 110 115 L80 115 Z" fill="#3B6CB4"/>
   
-  <!-- Yellow accent curve/highlight -->
-  <path d="M145 50 Q165 55, 165 75 Q165 90, 150 95 L148 88 Q157 85, 157 75 Q157 65, 145 62 Z" fill="#E9C500"/>
+  <!-- Yellow accent circle -->
+  <circle cx="155" cy="45" r="10" fill="#E9C500"/>
   
-  <!-- Small yellow accent dot -->
-  <circle cx="155" cy="45" r="8" fill="#E9C500"/>
+  <!-- Yellow accent curve -->
+  <path d="M145 55 Q165 60, 165 80 Q165 95, 150 100" stroke="#E9C500" stroke-width="8" stroke-linecap="round" fill="none"/>
   
-  <!-- Optional: Subtle bed icon at bottom -->
-  <rect x="70" y="145" width="60" height="8" rx="3" fill="white" opacity="0.4"/>
-  <rect x="80" y="155" width="8" height="15" rx="2" fill="white" opacity="0.4"/>
-  <rect x="112" y="155" width="8" height="15" rx="2" fill="white" opacity="0.4"/>
+  <!-- Small bed icon detail at bottom -->
+  <rect x="70" y="150" width="60" height="6" rx="3" fill="white" opacity="0.5"/>
+  <rect x="80" y="160" width="6" height="12" rx="2" fill="white" opacity="0.5"/>
+  <rect x="114" y="160" width="6" height="12" rx="2" fill="white" opacity="0.5"/>
 </svg>

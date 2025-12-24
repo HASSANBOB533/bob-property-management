@@ -45,7 +45,9 @@ export default async function LocaleLayout({
         <meta property="og:url" content="https://bobpropertymanagement.com/" />
         <meta property="og:title" content="Best of Bedz - Premium Property Management Services" />
         <meta property="og:description" content="Maximize your rental revenue with professional property management, interior design, and marketing services." />
-        <meta property="og:image" content="https://bobpropertymanagement.com/images/logo.svg" />
+        <meta property="og:image" content="https://bobpropertymanagement.com/images/og-image.svg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Best of Bedz" />
         <meta property="og:locale" content={locale === 'ar' ? 'ar_EG' : 'en_US'} />
         
@@ -54,7 +56,7 @@ export default async function LocaleLayout({
         <meta name="twitter:url" content="https://bobpropertymanagement.com/" />
         <meta name="twitter:title" content="Best of Bedz - Premium Property Management" />
         <meta name="twitter:description" content="Professional property management services to maximize your rental revenue" />
-        <meta name="twitter:image" content="https://bobpropertymanagement.com/images/logo.svg" />
+        <meta name="twitter:image" content="https://bobpropertymanagement.com/images/og-image.svg" />
         
         {/* Favicon and Icons */}
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

@@ -32,7 +32,7 @@ function BeforeAfterSlider({before, after, alt}: BeforeAfterImage) {
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging) return;
+    if (!isDragging || !e.touches.length) return;
     handleMove(e.touches[0].clientX);
   };
 

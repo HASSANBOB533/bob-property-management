@@ -60,6 +60,8 @@ export default function PropertyForm() {
 
     try {
       // Submit to Google Sheets via Google Apps Script
+      // The default URL is provided as a fallback, but should be configured via environment variable
+      // See GOOGLE_SHEETS_SETUP.md for configuration instructions
       const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || 
                        'https://script.google.com/macros/s/AKfycbzcdpdb1unzg6TJocWSxMPKCWnqJblQsVN_y1jQOab0ZY8RuNk4hNPFGCCAFIEbM/exec';
       
