@@ -155,6 +155,9 @@ export default function PropertyForm() {
                 type="tel"
                 name="phone"
                 required
+                                pattern="[0-9]{8,15}"
+                                placeholder="e.g., 01234567890"
+                                title="Please enter a valid phone number (8-15 digits only)"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-primary"
               />
             </div>
