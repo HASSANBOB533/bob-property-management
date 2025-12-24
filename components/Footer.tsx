@@ -17,26 +17,26 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-dark-text text-white mt-20">
+    <footer className="bg-dark-text text-white mt-20" role="contentinfo">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <div className="text-2xl font-bold mb-4">
+            <div className="text-2xl font-bold mb-4" aria-label="Best of Bedz">
               <span className="text-red-accent">B</span>
               <span className="text-green-primary">O</span>
               <span className="text-yellow-primary">B</span>
             </div>
             <p className="text-sm mb-4 opacity-90">{t('company.tagline')}</p>
-            <div className="space-y-2 text-sm opacity-80">
+            <address className="space-y-2 text-sm opacity-80 not-italic">
               <p>{t('company.address')}</p>
               <p dir="ltr" className="inline-block">{t('company.phone')}</p>
               <p>{t('company.email')}</p>
-            </div>
+            </address>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <nav aria-label="Footer navigation">
             <h3 className="font-semibold text-lg mb-4">{t('quickLinks.title')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -65,12 +65,12 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
 
           {/* Social Media */}
           <div>
             <h3 className="font-semibold text-lg mb-4">{t('social.title')}</h3>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4" role="list">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -78,9 +78,10 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="opacity-70 hover:opacity-100 transition-opacity"
-                  aria-label={social.name}
+                  aria-label={`Follow us on ${social.name}`}
+                  role="listitem"
                 >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d={social.icon} />
                   </svg>
                 </a>
