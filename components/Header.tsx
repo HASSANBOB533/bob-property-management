@@ -24,16 +24,17 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-3">
+          <Link href={`/${locale}`} className="flex items-center gap-3" aria-label="Best of Bedz Home">
             <Image 
               src="/images/logo.svg" 
               alt="Best of Bedz Logo" 
               width={50} 
               height={50}
               className="w-12 h-12 lg:w-14 lg:h-14"
+              priority
             />
             <div className="flex flex-col">
-              <div className="text-3xl lg:text-4xl font-bold text-blue-primary">
+              <div className="text-3xl lg:text-4xl font-bold text-blue-primary" aria-label="BOB">
                 <span className="text-red-accent">B</span>
                 <span className="text-green-primary">O</span>
                 <span className="text-yellow-primary">B</span>

@@ -1,0 +1,11 @@
+# robots.txt for Best of Bedz Property Management
+# Allow all crawlers
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bobpropertymanagement.com/sitemap.xml
+
+# Crawl delay (be respectful to search engines)
+Crawl-delay: 1

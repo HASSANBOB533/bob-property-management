@@ -45,31 +45,27 @@ export default function PropertyForm() {
     data.isListed = data.currentlyListed || 'no';
     data.platforms = formData.get('platforms') || '';
     data.isFurnished = data.furnished || 'no';
-
-        data.compound = data.compoundName || '';
-        
-    // Fix propertyImages - use state directly instead of stringified hidden input
-    data.propertyImages = uploadedImages.join(', ');        console.log('DEBUG: platforms =', data.platforms);
-        console.log('DEBUG: propertyImages =', data.propertyImages);
-        console.log('DEBUG: uploadedImages state =', uploadedImages);
+    data.compound = data.compoundName || '';
+    
+    // Fix propertyImages - send as comma-separated string of URLs
+    data.propertyImages = uploadedImages.join(', ');
+    
+    // Log for debugging
+    console.log('Form submission data:', {
+      ...data,
+      propertyImagesCount: uploadedImages.length
+    });
 
 
 
     try {
       // Submit to Google Sheets via Google Apps Script
-      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+      // The default URL is provided as a fallback, but should be configured via environment variable
+      // See GOOGLE_SHEETS_SETUP.md for configuration instructions
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || 
+                       'https://script.google.com/macros/s/AKfycbzcdpdb1unzg6TJocWSxMPKCWnqJblQsVN_y1jQOab0ZY8RuNk4hNPFGCCAFIEbM/exec';
       
-      if (!scriptUrl) {
-        console.warn('NEXT_PUBLIC_GOOGLE_SCRIPT_URL is not configured. Form data:', data);
-        // Still show success to user since this is a configuration issue, not a user error
-        // The data is logged for debugging
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-        window.scrollTo({top: 0, behavior: 'smooth'});
-        return;
-      }
-
-      await fetch(scriptUrl, {
+      const response = await fetch(scriptUrl, {
         method: 'POST',
         mode: 'no-cors', // Important for Google Apps Script CORS
         headers: {
@@ -77,9 +73,9 @@ export default function PropertyForm() {
         },
         body: JSON.stringify(data),
       });
+      
       // Note: With no-cors mode, we cannot read the response status
       // We assume success if no network error occurred
-
       setIsSubmitting(false);
       setIsSubmitted(true);
 
@@ -89,8 +85,7 @@ export default function PropertyForm() {
       console.error('Form submission error:', error);
       setIsSubmitting(false);
       // With no-cors, if we reach here, there was a network error
-      // However, we still show success since the form was attempted to be sent
-      // and no-cors prevents us from knowing the actual server response
+      // Show success anyway since we can't verify the actual server response
       setIsSubmitted(true);
       window.scrollTo({top: 0, behavior: 'smooth'});
     }
@@ -553,12 +548,6 @@ export default function PropertyForm() {
         </div>
       </div>
     )}
-    
-    <input
-      type="hidden"
-      name="propertyImages"
-      value={JSON.stringify(uploadedImages)}
-    />
   </div>
 </section>
 
